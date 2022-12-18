@@ -1,0 +1,279 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: var(--Verylightgrayishblue);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+:root {
+    /* Primary */
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Verylightgrayishblue: hsl(210, 60%, 98%);
+    --Lightgrayishblue1: hsl(211, 68%, 94%);
+    --Lighgrayishblue2: hsl(205, 33%, 90%);
+    --Grayishblue: hsl(219, 14%, 63%);
+    --Darkgrayishblue: hsl(219, 12%, 42%);
+    --Verydarkblue: hsl(224, 21%, 14%);
+}
+
+main {
+    max-width: 1440px;
+    width: 70%;
+    margin: 3rem auto;
+    padding: 1rem 0;
+    background: var(--White);
+    border-radius: 10px;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header__title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__title-smaller {
+    font-size: large;
+    color: var(--White);
+    background-color: var(--Blue);
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+.ul {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+
+.ul__items {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 25px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--Verylightgrayishblue);
+    border-radius: 10px;
+}
+
+img {
+    grid-row: 1/span 4;
+}
+
+.ul__items p {
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+.ul__items__when {
+    grid-row: 3;
+    color: var(--Grayishblue);
+}
+
+
+.ul__items__post {
+    width: 100%;
+    grid-row: 2;
+    color: var(--Darkgrayishblue);
+}
+
+
+.ul__items__name {
+    font-weight: 800;
+}
+
+
+.ul__items__post:hover {
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--Blue);
+}
+
+.ul__items__name:hover {
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--Blue);
+}
+
+.pic_comment {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+p.with-after::after {
+    display: inline-block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    margin-left: 1rem;
+    border-radius: 100%;
+    background-color: var(--Red);
+}
+
+
+.ul__items__pic {
+    grid-column: 4;
+    place-self: right;
+    padding: 0;
+    margin: 0;
+    width: 70px;
+    border: 5px solid var(--Lightgrayishblue1);
+    border-radius: 20px;
+}
+
+.private__message {
+    background: var(--White);
+}
+
+.private__message p {
+    grid-row: 1/3;
+    color: var(--Grayishblue);
+    margin: 0px;
+    padding: 1rem;
+    border: 1px solid var(--Grayishblue);
+    border-radius: 10px;
+}
+
+.private__message p:hover {
+    cursor: pointer;
+    border: none;
+    background-color: var(--Lightgrayishblue1);
+}
+
+
+
+
+@media (max-width:375px) {
+
+    body {
+        font-size: .7rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    main {
+        margin: 1rem auto;
+        width: 90%;
+        padding: 0;
+    }
+
+    img {
+        width: 50px;
+        grid-row: 2/3;
+    }
+
+    .ul__items__when {
+        grid-column: 2;
+        grid-row: 3;
+        color: var(--Grayishblue);
+    }
+
+    .ul__items {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-rows: 25px;
+        padding: 0;
+        margin:1rem;
+        background: var(--Verylightgrayishblue);
+        border-radius: 10px;
+    }
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

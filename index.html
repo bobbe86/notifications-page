@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor |_items page</title>
+
+</head>
+
+<body>
+  <main>
+    <header class="header">
+      <div class="header__title">
+
+        <h1>Notifications <span class="header__title-smaller">3</span></h1>
+
+      </div>
+
+      <a href="#"  rel="noopener noreferrer" id="toggleButton">Mark all as read</a>
+
+    </header>
+
+    <ul class="ul" role="list">
+
+
+      <li class="ul__items selected">
+        <img src="./assets/images/avatar-mark-webber.webp" alt="proilfe image">
+        <p id="target" class="target with-after"><span class="ul__items__name">Mark Webber</span> reacted to your recent
+          post <span class="ul__items__post">My first tournament
+            today! </span></p>
+        <span class="ul__items__when">1m ago</span>
+      </li>
+
+
+      <li class="ul__items">
+        <img src="./assets/images/avatar-angela-gray.webp" alt="profile image">
+        <p id="target" class="target with-after"><span class="ul__items__name">Angela Gray</span> followed you </p>
+        <span class="ul__items__when">5m ago</span>
+      </li>
+
+      <li class="ul__items">
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="profile image">
+        <p id="target" class="target with-after"><span class="ul__items__name">Jacob Thompson</span> has joined your
+          group <span class="ul__items__post">Chess Club </span></p>
+        <span class="ul__items__when">1 day ago</span>
+      </li>
+
+      <li class="ul__items">
+        <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="profile image">
+        <p id="target" class="target with-after"><span class="ul__items__name">Rizky Hasanuddin</span> sent you a
+          private message
+        </p>
+        <span class="ul__items__when">5 days ago</span>
+      </li>
+
+      <li class="ul__items private__message">
+        <p>
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+          I'm already having lots of fun and improving my game.
+        </p>
+      </li>
+
+      <li class="ul__items ">
+        <img src="./assets/images/avatar-kimberly-smith.webp" alt="profile image">
+        <p id="target" class="target with-after"><span class="ul__items__name">Kimberly Smith</span> commented on your
+          picture </p>
+          <img class="ul__items__pic" src="./assets/images/image-chess.webp" alt="girl with chess board">
+        <span class="ul__items__when">1 week ago</span>
+      </li>
+
+      <li class="ul__items">
+        <img src="./assets/images/avatar-nathan-peterson.webp" alt="profile image">
+        <p id="target" class="target with-after">
+          <span class="ul__items__name">Nathan Peterson</span> reacted to your recent post <span
+            class="ul__items__post">5 end-game strategies
+            to increase your win rate </span>
+        </p>
+        <span class="ul__items__when">2 weeks ago</span>
+      </li>
+
+      <li class="ul__items">
+        <img src="./assets/images/avatar-anna-kim.webp" alt="profile image">
+        <p id="target" class="target with-after"><span class="ul__items__name">Anna Kim</span> left the group <span
+            class="ul__items__post">Chess Club </span></p>
+        <span class="ul__items__when">2 weeks ago</span>
+      </li>
+
+    </ul>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Bobby S</a>.
+  </div>
+</body>
+
+</html>
